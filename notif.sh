@@ -33,7 +33,7 @@ do
 		else
 			readarray -t TEMP3 <<< "$TEMP"
 			array_contains2 ARRAY "$TEMP3"  && echo yes || paplay /usr/share/sounds/freedesktop/stereo/message-new-instant.oga
-			array_contains2 ARRAY "$TEMP3"  && echo yes || notify-send "Android Notification" "$TEMP3"
+			array_contains2 ARRAY "$TEMP3"  && echo yes || notify-send "Android Notification" "$TEMP3" -t 3000 -i "/home/smillernl/android/additional/adb_notify/android-icon.png"
 			array_contains2 ARRAY "$TEMP3"  && echo yes || ARRAY=("${ARRAY[@]}" "${TEMP3[@]}")
 			(( i++ ))
 		fi
