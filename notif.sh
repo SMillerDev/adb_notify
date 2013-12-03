@@ -16,7 +16,7 @@ array_contains2 () {
             break
         fi
     done
-    return $in
+    return "$in"
 }
 
 
